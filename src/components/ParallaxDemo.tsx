@@ -56,7 +56,11 @@ const ParallaxDemo = () => {
     const scrollPromptTimer = setTimeout(() => setShowScrollPrompt(true), 500);
 
     const hideScrollPrompt = () => {
-      setShowScrollPrompt(false);
+      if (window.scrollY > 100) {
+        setShowScrollPrompt(false);
+      } else {
+        setShowScrollPrompt(true);
+      }
     };
 
     addEventListener('scroll', hideScrollPrompt);
