@@ -74,6 +74,10 @@ const TopSection = () => {
               muted
               loop
               playsInline
+              style={{
+                WebkitMaskImage: `url(${prefix()}/images/L-logo.webp)`,
+                maskImage: `url(${prefix()}/images/L-logo.webp)`,
+              }}
             >
               <source src={`${prefix()}/video/party.mp4`} type="video/mp4" />
             </video>

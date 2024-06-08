@@ -167,8 +167,6 @@
   margin: 0 auto;
   text-align: center;
   object-fit: cover;
-  -webkit-mask-image: url(/images/L-logo.webp);
-  mask-image: url(/images/L-logo.webp);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
