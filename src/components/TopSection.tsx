@@ -45,7 +45,7 @@ const TopSection = () => {
           className={`${styles.sectionBgImgContainer} ${styles.topSectionBgImgContainer}`}
         >
           <Image
-            src="/./images/top-section-bg.webp"
+            src="/images/top-section-bg.webp"
             className={styles.sectionBgImg}
             style={{
               transform: `translateY(${bgTranslateY(sectionProgress)}px)`,
@@ -74,7 +74,7 @@ const TopSection = () => {
               loop
               playsInline
             >
-              <source src="/./video/party.mp4" type="video/mp4" />
+              <source src="/video/party.mp4" type="video/mp4" />
             </video>
           </Parallax>
         </div>
