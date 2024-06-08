@@ -35,6 +35,8 @@ const ParallaxDemo = () => {
   const [section6Progress, setSection6Progress] = useState<number>(0);
   const [roadmapSectionProgress, setRoadmapSectionProgress] =
     useState<number>(0);
+  const [mobileRoadmapSectionProgress, setMobileRoadmapSectionProgress] =
+    useState<number>(0);
   const [bottomSectionProgress, setBottomSectionProgress] = useState<number>(0);
 
   const [showScrollPrompt, setShowScrollPrompt] = useState<boolean>(false);
@@ -185,17 +187,14 @@ const ParallaxDemo = () => {
           progress={section1Progress}
           onProgressChange={setSection1Progress}
         />
-        {windowSize.width >= theme.breakpoints.md ? (
-          <RoadmapSection
-            progress={roadmapSectionProgress}
-            onProgressChange={setRoadmapSectionProgress}
-          />
-        ) : (
-          <MobileRoadmapSection
-            progress={roadmapSectionProgress}
-            onProgressChange={setRoadmapSectionProgress}
-          />
-        )}
+        <RoadmapSection
+          progress={roadmapSectionProgress}
+          onProgressChange={setRoadmapSectionProgress}
+        />
+        <MobileRoadmapSection
+          progress={mobileRoadmapSectionProgress}
+          onProgressChange={setMobileRoadmapSectionProgress}
+        />
         <Section2
           progress={section2Progress}
           onProgressChange={setSection2Progress}
