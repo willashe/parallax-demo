@@ -1,8 +1,6 @@
 import { CSSProperties, FunctionComponent } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import { theme } from './theme';
-
 const arrowSize = 18;
 const arrowAnimationSpeed = 3;
 
@@ -29,12 +27,10 @@ const arrowsAnimation = keyframes`
 `;
 
 const Container = styled.div`
-  display: none;
+  display: block;
   pointer-events: none;
-  ${theme.up(theme.breakpoints.md)} {
-    display: block;
-  }
 `;
+
 const Arrows = styled.div`
   position: absolute;
   bottom: 0;
