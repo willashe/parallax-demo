@@ -1,3 +1,4 @@
+import prefix from '@/utils/prefix';
 import Image from 'next/image';
 import { easeIn, easeOut, interpolate } from 'popmotion';
 import { Parallax } from 'react-scroll-parallax';
@@ -48,7 +49,7 @@ const RoadmapSection = ({
       >
         <div className={styles.sectionBgImgContainer}>
           <Image
-            src="/images/section-1-bg.webp"
+            src={`${prefix()}/images/section-1-bg.webp`}
             className={styles.sectionBgImg}
             style={{
               transform: `translateY(${bgTranslateY(progress)}px)`,

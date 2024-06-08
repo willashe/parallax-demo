@@ -1,3 +1,4 @@
+import prefix from '@/utils/prefix';
 import Image from 'next/image';
 import { easeIn, easeOut, interpolate } from 'popmotion';
 import { Parallax } from 'react-scroll-parallax';
@@ -73,7 +74,7 @@ const Section1 = ({ progress, onProgressChange }: Section1Props) => (
     >
       <div className={styles.sectionBgImgContainer}>
         <Image
-          src="/images/section-1-bg.webp"
+          src={`${prefix()}/images/section-1-bg.webp`}
           className={styles.sectionBgImg}
           style={{
             transform: `translateY(${bgTranslateY(progress)}px)`,
@@ -124,7 +125,7 @@ const Section1 = ({ progress, onProgressChange }: Section1Props) => (
               opacity: badge1Opacity(progress),
               transform: `translateY(${badge1TranslateY(progress)}px)`,
             }}
-            src="/images/badge-access.webp"
+            src={`${prefix()}/images/badge-access.webp`}
             alt=""
           />
           <div className={styles.horizontalBadgeLineContainer}>
@@ -137,7 +138,7 @@ const Section1 = ({ progress, onProgressChange }: Section1Props) => (
               }}
             >
               <img
-                src="/images/arrow.webp"
+                src={`${prefix()}/images/arrow.webp`}
                 className={styles.horizontalBadgeLineArrow}
                 alt=""
               />
@@ -148,7 +149,7 @@ const Section1 = ({ progress, onProgressChange }: Section1Props) => (
               opacity: badge2Opacity(progress),
               transform: `translateY(${badge2TranslateY(progress)}px)`,
             }}
-            src="/images/badge-listen.webp"
+            src={`${prefix()}/images/badge-listen.webp`}
             alt=""
           />
           <div className={styles.horizontalBadgeLineContainer}>
@@ -161,7 +162,7 @@ const Section1 = ({ progress, onProgressChange }: Section1Props) => (
               }}
             >
               <img
-                src="/images/arrow.webp"
+                src={`${prefix()}/images/arrow.webp`}
                 className={styles.horizontalBadgeLineArrow}
                 alt=""
               />
@@ -172,12 +173,12 @@ const Section1 = ({ progress, onProgressChange }: Section1Props) => (
               opacity: badge3Opacity(progress),
               transform: `translateY(${badge3TranslateY(progress)}px)`,
             }}
-            src="/images/badge-experience.webp"
+            src={`${prefix()}/images/badge-experience.webp`}
             alt=""
           />
         </div>
         <img
-          src="/images/L-1-alt.webp"
+          src={`${prefix()}/images/L-1-alt.webp`}
           className={`${styles.logoImg} ${styles.removeMdUp}`}
           style={{
             transform: `translateY(${logoTranslateY(progress)}px)`,

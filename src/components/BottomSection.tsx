@@ -1,4 +1,5 @@
 import useWindowSize from '@/hooks/useWindowSize';
+import prefix from '@/utils/prefix';
 import Image from 'next/image';
 import { easeOut, interpolate } from 'popmotion';
 import { Parallax } from 'react-scroll-parallax';
@@ -63,7 +64,7 @@ const BottomSection = ({ progress, onProgressChange }: BottomSectionProps) => {
       >
         <div className={styles.sectionBgImgContainer}>
           <Image
-            src="/images/bottom-section-bg.webp"
+            src={`${prefix()}/images/bottom-section-bg.webp`}
             className={styles.sectionBgImg}
             style={{
               transform: `translateY(${bgTranslateY(progress)}px)`,
@@ -95,7 +96,7 @@ const BottomSection = ({ progress, onProgressChange }: BottomSectionProps) => {
             <div className={styles.partnerLogoContainer}>
               <div className={styles.partnerLogo}>
                 <Image
-                  src="/images/sponsor-logo.webp"
+                  src={`${prefix()}/images/sponsor-logo.webp`}
                   className={styles.partnerLogoImage}
                   alt=""
                   style={{
@@ -108,7 +109,7 @@ const BottomSection = ({ progress, onProgressChange }: BottomSectionProps) => {
               </div>
               <div className={styles.partnerLogo}>
                 <Image
-                  src="/images/sponsor-logo.webp"
+                  src={`${prefix()}/images/sponsor-logo.webp`}
                   className={styles.partnerLogoImage}
                   alt=""
                   style={{
@@ -121,7 +122,7 @@ const BottomSection = ({ progress, onProgressChange }: BottomSectionProps) => {
               </div>
               <div className={styles.partnerLogo}>
                 <Image
-                  src="/images/sponsor-logo.webp"
+                  src={`${prefix()}/images/sponsor-logo.webp`}
                   className={styles.partnerLogoImage}
                   alt=""
                   style={{
@@ -134,7 +135,7 @@ const BottomSection = ({ progress, onProgressChange }: BottomSectionProps) => {
               </div>
               <div className={styles.partnerLogo}>
                 <Image
-                  src="/images/sponsor-logo.webp"
+                  src={`${prefix()}/images/sponsor-logo.webp`}
                   className={styles.partnerLogoImage}
                   alt=""
                   style={{

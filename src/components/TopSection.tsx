@@ -75,7 +75,7 @@ const TopSection = () => {
               loop
               playsInline
             >
-              <source src={`${prefix()}/video/party.mp4" type="video/mp4`} />
+              <source src={`${prefix()}/video/party.mp4`} type="video/mp4" />
             </video>
           </Parallax>
         </div>

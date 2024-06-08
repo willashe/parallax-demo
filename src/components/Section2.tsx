@@ -1,3 +1,4 @@
+import prefix from '@/utils/prefix';
 import Image from 'next/image';
 import { easeIn, easeOut, interpolate } from 'popmotion';
 import { Parallax } from 'react-scroll-parallax';
@@ -39,7 +40,7 @@ const Section2 = ({ progress, onProgressChange }: Section2Props) => (
     >
       <div className={styles.sectionBgImgContainer}>
         <Image
-          src="/images/section-2-bg.webp"
+          src={`${prefix()}/images/section-2-bg.webp`}
           className={styles.sectionBgImg}
           style={{
             transform: `translateY(${bgTranslateY(progress)}px)`,
@@ -69,7 +70,7 @@ const Section2 = ({ progress, onProgressChange }: Section2Props) => (
           Live For Music.
         </div>
         <img
-          src="/images/L-2.webp"
+          src={`${prefix()}/images/L-2.webp`}
           className={`${styles.logoImg} ${styles.removeMdUp}`}
           style={{
             transform: `translateY(${logoTranslateY(progress)}px)`,

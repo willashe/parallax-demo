@@ -1,3 +1,4 @@
+import prefix from '@/utils/prefix';
 import { easeIn, easeInOut, easeOut, interpolate, linear } from 'popmotion';
 import { useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
@@ -84,7 +85,7 @@ const Badge = ({ index }: BadgeProps) => {
             }}
           >
             <img
-              src={`/images/${img}`}
+              src={`${prefix()}/images/${img}`}
               className={styles.roadmapBadgeImg}
               alt=""
             />
@@ -107,7 +108,7 @@ const Badge = ({ index }: BadgeProps) => {
             >
               {index === 3 && (
                 <img
-                  src="/images/arrow.webp"
+                  src={`${prefix()}/images/arrow.webp`}
                   className={styles.roadmapLineArrow}
                   alt=""
                 />

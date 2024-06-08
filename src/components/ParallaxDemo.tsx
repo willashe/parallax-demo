@@ -1,4 +1,5 @@
 import useWindowSize from '@/hooks/useWindowSize';
+import prefix from '@/utils/prefix';
 import Image from 'next/image';
 import { easeIn, easeOut, interpolate } from 'popmotion';
 import { useEffect, useState } from 'react';
@@ -92,7 +93,7 @@ const ParallaxDemo = () => {
               }}
             >
               <Image
-                src="/images/L-1-alt.webp"
+                src={`${prefix()}/images/L-1-alt.webp`}
                 style={{
                   willChange: 'opacity',
                   opacity: topLOpacity(section1Progress),
@@ -104,7 +105,7 @@ const ParallaxDemo = () => {
                 sizes="100%"
               />
               <Image
-                src="/images/L-8.webp"
+                src={`${prefix()}/images/L-8.webp`}
                 style={{
                   willChange: 'opacity',
                   opacity: topLOpacity(roadmapSectionProgress),
@@ -116,7 +117,7 @@ const ParallaxDemo = () => {
                 sizes="100%"
               />
               <Image
-                src="/images/L-2.webp"
+                src={`${prefix()}/images/L-2.webp`}
                 style={{
                   willChange: 'opacity',
                   opacity: topLOpacity(section2Progress),
@@ -128,7 +129,7 @@ const ParallaxDemo = () => {
                 sizes="100%"
               />
               <Image
-                src="/images/L-3.webp"
+                src={`${prefix()}/images/L-3.webp`}
                 style={{
                   willChange: 'opacity',
                   opacity: topLOpacity(section3Progress),
@@ -140,7 +141,7 @@ const ParallaxDemo = () => {
                 sizes="100%"
               />
               <Image
-                src="/images/L-4.webp"
+                src={`${prefix()}/images/L-4.webp`}
                 style={{
                   willChange: 'opacity',
                   opacity: topLOpacity(section4Progress),
@@ -152,7 +153,7 @@ const ParallaxDemo = () => {
                 sizes="100%"
               />
               <Image
-                src="/images/L-5.webp"
+                src={`${prefix()}/images/L-5.webp`}
                 style={{
                   willChange: 'opacity',
                   opacity: topLOpacity(section5Progress),
@@ -164,7 +165,7 @@ const ParallaxDemo = () => {
                 sizes="100%"
               />
               <Image
-                src="/images/L-6.webp"
+                src={`${prefix()}/images/L-6.webp`}
                 style={{
                   willChange: 'opacity',
                   opacity: topLOpacity(section6Progress),

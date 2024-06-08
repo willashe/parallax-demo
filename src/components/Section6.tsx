@@ -1,3 +1,4 @@
+import prefix from '@/utils/prefix';
 import Image from 'next/image';
 import { easeIn, easeOut, interpolate } from 'popmotion';
 import { Parallax } from 'react-scroll-parallax';
@@ -37,7 +38,7 @@ const Section6 = ({ progress, onProgressChange }: Section6Props) => (
     >
       <div className={styles.sectionBgImgContainer}>
         <Image
-          src="/images/section-3-bg.webp"
+          src={`${prefix()}/images/section-3-bg.webp`}
           className={styles.sectionBgImg}
           style={{
             transform: `translateY(${bgTranslateY(progress)}px)`,
@@ -86,7 +87,7 @@ const Section6 = ({ progress, onProgressChange }: Section6Props) => (
           Join our e-mail list for the latest launch updates and Artist Drops.
         </p>
         <img
-          src="/images/L-4.webp"
+          src={`${prefix()}/images/L-4.webp`}
           className={`${styles.logoImg} ${styles.removeMdUp}`}
           style={{
             transform: `translateY(${logoTransform(progress)}px)`,

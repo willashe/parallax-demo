@@ -1,3 +1,4 @@
+import prefix from '@/utils/prefix';
 import { easeIn, easeInOut, easeOut, interpolate, linear } from 'popmotion';
 import { useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
@@ -70,7 +71,7 @@ const MobileBadge = ({ index }: MobileBadgeProps) => {
           }}
         >
           <img
-            src={`/images/${img}`}
+            src={`${prefix()}/images/${img}`}
             className={styles.roadmapBadgeImg}
             alt=""
           />
@@ -85,7 +86,7 @@ const MobileBadge = ({ index }: MobileBadgeProps) => {
               }}
             >
               <img
-                src="/images/arrow.webp"
+                src={`${prefix()}/images/arrow.webp`}
                 className={styles.roadmapLineArrow}
                 alt=""
               />

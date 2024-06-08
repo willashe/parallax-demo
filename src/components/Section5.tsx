@@ -1,3 +1,4 @@
+import prefix from '@/utils/prefix';
 import Image from 'next/image';
 import { easeIn, easeOut, interpolate } from 'popmotion';
 import { Parallax } from 'react-scroll-parallax';
@@ -37,7 +38,7 @@ const Section5 = ({ progress, onProgressChange }: Section5Props) => (
     >
       <div className={styles.sectionBgImgContainer}>
         <Image
-          src="/images/section-2-bg.webp"
+          src={`${prefix()}/images/section-2-bg.webp`}
           className={styles.sectionBgImg}
           style={{
             transform: `translateY(${bgTranslateY(progress)}px)`,
@@ -72,7 +73,7 @@ const Section5 = ({ progress, onProgressChange }: Section5Props) => (
           ANY music NFT that you own.
         </p>
         <img
-          src="/images/L-3.webp"
+          src={`${prefix()}/images/L-3.webp`}
           className={`${styles.logoImg} ${styles.removeMdUp}`}
           style={{
             transform: `translateY(${logoTransform(progress)}px)`,

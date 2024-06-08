@@ -1,3 +1,4 @@
+import prefix from '@/utils/prefix';
 import Image from 'next/image';
 import { easeIn, easeOut, interpolate } from 'popmotion';
 import { Parallax } from 'react-scroll-parallax';
@@ -40,7 +41,7 @@ const Section3 = ({ progress, onProgressChange }: Section3Props) => (
     >
       <div className={styles.sectionBgImgContainer}>
         <Image
-          src="/images/section-3-bg.webp"
+          src={`${prefix()}/images/section-3-bg.webp`}
           className={styles.sectionBgImg}
           style={{
             transform: `translateY(${bgTranslateY(progress)}px)`,
@@ -83,12 +84,36 @@ const Section3 = ({ progress, onProgressChange }: Section3Props) => (
             willChange: 'transform, opacity',
           }}
         >
-          <img src="/images/tile1.webp" className={styles.tileImg} alt="" />
-          <img src="/images/tile2.webp" className={styles.tileImg} alt="" />
-          <img src="/images/tile3.webp" className={styles.tileImg} alt="" />
-          <img src="/images/tile4.webp" className={styles.tileImg} alt="" />
-          <img src="/images/tile5.webp" className={styles.tileImg} alt="" />
-          <img src="/images/tile6.webp" className={styles.tileImg} alt="" />
+          <img
+            src={`${prefix()}/images/tile1.webp`}
+            className={styles.tileImg}
+            alt=""
+          />
+          <img
+            src={`${prefix()}/images/tile2.webp`}
+            className={styles.tileImg}
+            alt=""
+          />
+          <img
+            src={`${prefix()}/images/tile3.webp`}
+            className={styles.tileImg}
+            alt=""
+          />
+          <img
+            src={`${prefix()}/images/tile4.webp`}
+            className={styles.tileImg}
+            alt=""
+          />
+          <img
+            src={`${prefix()}/images/tile5.webp`}
+            className={styles.tileImg}
+            alt=""
+          />
+          <img
+            src={`${prefix()}/images/tile6.webp`}
+            className={styles.tileImg}
+            alt=""
+          />
         </div>
       </div>
     </Parallax>
