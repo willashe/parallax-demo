@@ -1,3 +1,4 @@
+import prefix from '@/utils/prefix';
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
 
@@ -16,7 +17,13 @@ export default function ParallaxDemoLayout({
   return (
     <html lang="en">
       <body>
-        <main>{children}</main>
+        <main
+          style={{
+            backgroundImage: `url(${prefix()}/images/body-bg.webp)`,
+          }}
+        >
+          {children}
+        </main>
       </body>
     </html>
   );
