@@ -1,3 +1,4 @@
+import prefix from '@/utils/prefix';
 import Image from 'next/image';
 import { easeIn, interpolate } from 'popmotion';
 import { useEffect, useRef, useState } from 'react';
@@ -45,7 +46,7 @@ const TopSection = () => {
           className={`${styles.sectionBgImgContainer} ${styles.topSectionBgImgContainer}`}
         >
           <Image
-            src="/images/top-section-bg.webp"
+            src={`${prefix()}/images/top-section-bg.webp`}
             className={styles.sectionBgImg}
             style={{
               transform: `translateY(${bgTranslateY(sectionProgress)}px)`,
@@ -74,7 +75,7 @@ const TopSection = () => {
               loop
               playsInline
             >
-              <source src="/video/party.mp4" type="video/mp4" />
+              <source src={`${prefix()}/video/party.mp4" type="video/mp4`} />
             </video>
           </Parallax>
         </div>
