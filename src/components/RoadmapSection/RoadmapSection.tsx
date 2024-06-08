@@ -49,7 +49,7 @@ const RoadmapSection = ({
       >
         <div className={styles.sectionBgImgContainer}>
           <Image
-            src={`${prefix()}/images/section-1-bg.webp`}
+            src={`${prefix()}/images/section-2-bg.webp`}
             className={styles.sectionBgImg}
             style={{
               transform: `translateY(${bgTranslateY(progress)}px)`,

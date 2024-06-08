@@ -40,7 +40,7 @@ const Section2 = ({ progress, onProgressChange }: Section2Props) => (
     >
       <div className={styles.sectionBgImgContainer}>
         <Image
-          src={`${prefix()}/images/section-2-bg.webp`}
+          src={`${prefix()}/images/section-1-bg.webp`}
           className={styles.sectionBgImg}
           style={{
             transform: `translateY(${bgTranslateY(progress)}px)`,
