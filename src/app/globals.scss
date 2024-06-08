@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Neue Plak';
+  src:
+    url('/fonts/NeuePlak-Regular.woff2') format('woff2'),
+    url('/fonts/NeuePlak-Regular.woff') format('woff');
+  font-weight: normal;
+  font-display: 'swap';
+}
+
+@font-face {
+  font-family: 'Neue Plak';
+  src:
+    url('/fonts/NeuePlak-Light.woff2') format('woff2'),
+    url('/fonts/NeuePlak-Light.woff') format('woff');
+  font-weight: lighter;
+  font-display: 'swap';
+}
+
+@font-face {
+  font-family: 'Neue Plak';
+  src:
+    url('/fonts/NeuePlak-Bold.woff2') format('woff2'),
+    url('/fonts/NeuePlak-Bold.woff') format('woff');
+  font-weight: bold;
+  font-display: 'swap';
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Neue Plak', sans-serif;
+  color: white;
+  background: black;
+  font-size: 16px;
+}
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/images/body-bg.webp');
+  background-position: center;
+  background-size: 140% 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 2rem;
+  color: #ddd;
+  /* text-align: justify; */
+}
+
+small {
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+button {
+  cursor: pointer;
+}

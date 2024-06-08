@@ -1,0 +1,570 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.stickySection {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.stickySectionContainer {
+  width: 100%;
+  height: 130vh;
+  margin: 0 auto;
+}
+
+.sectionBgImgContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 130vh;
+  width: 100%;
+  top: -15vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.sectionBgImg {
+  height: 100%;
+  will-change: transform;
+}
+
+.sectionContent {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 1920px;
+  padding: 100px 4% 4%;
+  margin: 0 auto;
+}
+
+.topSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+  overflow: visible;
+}
+
+.topSectionBgImgContainer,
+.bottomSectionBgImgContainer {
+  height: 100%;
+  top: 0;
+}
+
+.bottomSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  height: calc(100vh - 360px);
+  width: 100vw;
+  font-size: 4rem;
+  padding: 0 4% 2%;
+  z-index: 0;
+}
+
+.bottomSectionBgImgContainer {
+  height: 150%;
+  top: -50%;
+  bottom: 0;
+}
+
+.bottomSectionBgImg {
+  position: absolute;
+  bottom: 0;
+  left: 50% !important;
+  width: 100%;
+  min-height: 800px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.bottomSectionContent {
+  max-width: 1280px;
+  justify-content: space-evenly;
+}
+
+.headerText {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 3rem;
+  will-change: transform, opacity;
+}
+
+.subHeaderText {
+  font-size: 2.7rem;
+  font-weight: bold;
+  line-height: 2.7rem;
+  will-change: opacity, transform;
+}
+
+.outlineText {
+  /* TODO: review vendor-prefixes, polyfills, etc. */
+  -ms-text-stroke: 1px white;
+  -moz-text-stroke: 1px white;
+  -webkit-text-stroke: 1px white;
+  color: rgba(0, 0, 0, 0);
+}
+
+.gradientText {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff00e5, #0023e2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 6px 0 0;
+}
+
+.videoContainer {
+  flex: 0 1 100%;
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  align-items: stretch;
+}
+
+.videoInnerContainer {
+  flex: 0 1 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0 8rem;
+}
+
+.video {
+  width: 76%;
+  height: 100%;
+  max-height: 70vh;
+  margin: 0 auto;
+  text-align: center;
+  object-fit: cover;
+  -webkit-mask-image: url(/images/L-logo.webp);
+  mask-image: url(/images/L-logo.webp);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  /* fix for weird 1px video mask line at certain resolutions */
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.countdownContainer {
+  position: absolute;
+  bottom: 10rem;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+  padding: 0 1rem 2.25rem;
+}
+
+.countdownText {
+  margin-top: -8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-shadow: 5px 5px 15px #000;
+  font-size: 3rem;
+}
+
+.signupButton {
+  margin-top: 2rem;
+  margin-bottom: -20rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.countdownBodyText {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.logoContainer {
+  display: none;
+  position: sticky;
+  float: right;
+  top: 0;
+  height: 100vh;
+  width: 34%;
+  min-width: 300px;
+  max-height: 100vh;
+  z-index: 4;
+}
+
+.logoInnerContainer {
+  position: absolute;
+  top: 16%;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.logoImg {
+  position: absolute;
+  right: 0;
+  bottom: -25%;
+  width: 70%;
+  max-width: 400px;
+  opacity: 1;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8));
+  will-change: opacity;
+}
+
+.tileContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.tileImg {
+  flex: 0 1 30%;
+  width: 30%;
+  margin: 1%;
+}
+
+.imageBlockContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  will-change: opacity;
+}
+
+.imageBlockImageContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+}
+
+.imageBlockImageContainer img {
+  will-change: transform;
+}
+
+.roadmapSectionContainer {
+  position: relative;
+  height: 130vh;
+}
+
+.roadmapBadgesContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 600vh;
+}
+
+.roadmapBadge {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roadmapBadgeImg {
+  max-width: 100%;
+}
+
+.roadmapLineContainer {
+  text-align: center;
+}
+
+.roadmapLine {
+  position: absolute;
+  border-left: 1px dashed gray;
+  margin: 1vh auto;
+  width: 1px;
+  height: 24vh;
+}
+
+.roadmapLineArrow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  transform: translate(calc(-1px - 50%), 50%);
+}
+
+.horizontalBadgeContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.horizontalBadgeContainer > img {
+  min-width: 0;
+  will-change: opacity, transform;
+  width: 25%;
+}
+
+.horizontalBadgeLineContainer {
+  text-align: center;
+  position: relative;
+  width: 10%;
+  margin-bottom: 12%;
+}
+
+.horizontalBadgeLine {
+  position: absolute;
+  border-top: 1px dashed gray;
+  margin: 1vh auto;
+  left: 0;
+  right: 0;
+  height: 1px;
+  will-change: width, opacity, transform;
+}
+
+.horizontalBadgeLineArrow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  transform: translate(50%, 50%) rotate(-90deg);
+}
+
+.partnerLogoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.partnerLogo {
+  position: relative;
+  height: 48px;
+  width: 100%;
+  margin: 0.5rem;
+}
+
+.partnerLogoImage {
+  object-fit: contain;
+  will-change: opacity, transform;
+}
+
+/* Begin Media Queries */
+@media (min-width: 375px) {
+  .sectionContent {
+    padding: 120px 4% 4%;
+  }
+
+  .sectionBgImg {
+    min-width: 100%;
+  }
+
+  .headerText {
+    font-size: 5rem;
+    line-height: 4rem;
+  }
+
+  .subHeaderText {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .countdownText {
+    font-size: 4rem;
+  }
+
+  .sectionContent {
+    padding: 140px 50% 0 16%;
+  }
+
+  .roadmapSectionContainer {
+    height: 600vh;
+  }
+
+  .bottomSection {
+    padding: 0 10% 4%;
+  }
+
+  .bottomSectionBgImgContainer {
+    height: 200%;
+    top: -100%;
+    bottom: 0;
+  }
+
+  .headerText {
+    font-size: 6rem;
+    line-height: 5rem;
+  }
+
+  .logoContainer {
+    display: block;
+  }
+
+  .logoImg {
+    right: auto;
+    bottom: auto;
+    width: auto;
+    max-width: unset;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+  }
+
+  .roadmapBadge {
+    position: absolute;
+    width: 10%;
+    height: 15vh;
+  }
+
+  .roadmapBadgeImg {
+    max-height: 15vh;
+  }
+
+  .roadmapLineContainer {
+    position: absolute;
+    left: 3%;
+    width: 10%;
+    text-align: center;
+  }
+
+  .roadmapLine {
+    position: relative;
+    margin: 1vh auto;
+    height: 3vh;
+  }
+
+  .horizontalBadgeContainer {
+    margin: 2rem 0;
+  }
+
+  .partnerLogoContainer {
+    flex-direction: row;
+    margin: 1rem 0;
+  }
+  .partnerLogo {
+    height: 64px;
+  }
+  .partnerLogo:first-of-type {
+    margin-left: 0;
+  }
+  .partnerLogo:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .videoInnerContainer {
+    padding: 4rem 0 12rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .headerText {
+    font-size: 9rem;
+    line-height: 8rem;
+  }
+
+  .sectionContent {
+    padding: 160px 50% 0 16%;
+  }
+
+  .logoContainer {
+    width: 40%;
+  }
+
+  .logoInnerContainer {
+    height: 100%;
+  }
+
+  .tileImg {
+    flex: 0 1 25%;
+    width: 25%;
+  }
+
+  .countdownContainer {
+    bottom: 10rem;
+    padding: 0 1rem 0.5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .headerText {
+    font-size: 10rem;
+  }
+
+  .sectionContent {
+    padding: 160px 900px 0 300px;
+  }
+}
+/* End Media Queries */
+
+/* Begin Utility Classes */
+.showMdUp {
+  visibility: hidden;
+}
+.removeSmDown {
+  display: none;
+}
+.removeMdUp {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .showMdUp {
+    visibility: visible;
+  }
+  .hideMdUp {
+    visibility: hidden;
+  }
+  .removeSmDown {
+    display: block;
+  }
+  .removeMdUp {
+    display: none;
+  }
+}
+/* End Utility Classes */
